@@ -1,0 +1,65 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ibm.bluelist"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+     <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <application
+        android:name=".BlueListApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ibm.bluelist.Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ibm.bluelist.MainActivity"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        
+        <activity
+            android:name="com.ibm.bluelist.EditActivity"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        
+        <activity
+            android:name="com.ibm.bluelist.Survey1"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="com.ibm.bluelist.Survey2"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="com.ibm.bluelist.Survey3"
+            android:label="@string/title_activity_edit" >
+        </activity>
+        
+        <activity
+            android:name="com.ibm.bluelist.Survey4"
+            android:label="@string/title_activity_edit" >
+        </activity>
+         <activity
+            android:name="com.ibm.bluelist.Thank"
+            android:label="@string/title_activity_edit" >
+        </activity>
+    </application>
+
+</manifest>

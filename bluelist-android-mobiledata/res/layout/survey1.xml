@@ -1,0 +1,112 @@
+<!--
+Copyright 2014 IBM Corp. All Rights Reserved
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+ 
+http://www.apache.org/licenses/LICENSE-2.0  
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/itemToAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="How do you rate performance?"
+            android:imeOptions="actionDone"
+            android:paddingBottom="20dp"
+            android:paddingLeft="55dp"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textSize="19sp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/clearText"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:onClick="clearText" >
+        </Button>
+
+        <Button
+            android:id="@+id/acceptText"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/plusbutton"
+            android:onClick="createItem" >
+        </Button>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/itemsList"
+        android:layout_width="match_parent"
+        android:layout_height="282dp"
+        android:layout_above="@+id/ratingBar1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="19dp"
+        android:background="@color/background" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/itemsList"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/titlelines"
+        android:fontFamily="Roboto"
+        android:padding="10dp"
+        android:text="Enter your views"
+        android:textAllCaps="true"
+        android:textColor="@color/list_text_color"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="32dp"
+        android:layout_toRightOf="@+id/button1"
+        android:numStars="4"
+        android:rating="2.0"
+        android:stepSize="1.0" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ratingBar1"
+        android:text="next" />
+
+</RelativeLayout>
